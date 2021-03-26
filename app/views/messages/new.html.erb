@@ -1,5 +1,7 @@
-<h1>New Message</h1>
+<section class="w-auto mt-8 mb-8">
+    <h1 class="text-gray-700 md:text-5xl font-bold">Enviar uma mensagem</h1>
+</section>
 
 <%= render 'form', message: @message %>
 
-<%= link_to 'Back', messages_path %>
+<%= link_to 'Back', messages_path, class: "block w-32  text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold"%>

@@ -1,33 +1,36 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Messages</h1>
+<section class="w-auto mt-8 mb-8">
+        <h1 class="text-gray-700 md:text-5xl font-bold">Mensagens</h1>
+</section>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Message type</th>
-      <th>Message</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @messages.each do |message| %>
+<div class="w-full">
+  <table class="w-full table">
+    <thead class="bg-gray-700 text-white text-center font-bold">
       <tr>
-        <td><%= message.name %></td>
-        <td><%= message.email %></td>
-        <td><%= message.message_type %></td>
-        <td><%= message.message %></td>
-        <td><%= link_to 'Show', message %></td>
-        <td><%= link_to 'Edit', edit_message_path(message) %></td>
-        <td><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th class="py-2 px-4">Name</th>
+        <th class="py-2 px-4">Email</th>
+        <th class="py-2 px-4">Message type</th>
+        <th class="py-2 px-4">Message</th>
+        <th colspan="3" class="py-2 px-4"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
+    <tbody class="text-center">
+      <% @messages.each do |message| %>
+        <tr>
+          <td class="py-2 px-4"><%= message.name %></td>
+          <td class="py-2 px-4"><%= message.email %></td>
+          <td class="py-2 px-4"><%= message.message_type %></td>
+          <td class="py-2 px-4"><%= message.message %></td>
+          <td class="py-2 px-4"><%= link_to 'Show', message %></td>
+          <td class="py-2 px-4"><%= link_to 'Edit', edit_message_path(message) %></td>
+          <td class="py-2 px-4"><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <br>
 
-<%= link_to 'New Message', new_message_path %>
+<%= link_to 'New Message', new_message_path, class: "ml-auto w-60 block py-2 px-4 bg-gray-700 text-bold text-base text-white text-center rounded"%>

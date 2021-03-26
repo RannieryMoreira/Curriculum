@@ -12,10 +12,18 @@
     color: inherit;
 }
 
+a{
+    color: inherit;
+}
+
 body{
     font-family: 'Nunito', sans-serif;;
 }
 
 .roboto{
     font-family: 'Roboto', sans-serif;
+}
+
+.table tr:nth-child(even){
+    background-color: #eee;
 }

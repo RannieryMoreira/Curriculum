@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @message.name %>
-</p>
+<section class="w-full bg-gray-200 p-8">
+  <p>
+    <h1 class="text-5xl text-gray-700 font-bold"><%= @message.name%></h1>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @message.email %>
-</p>
+  <p class="text-xl font-bold">
+    <%= @message.email %>
+  </p>
 
-<p>
-  <strong>Message type:</strong>
-  <%= @message.message_type %>
-</p>
+  <p class="text-xl">
+    <%= @message.message_type %>
+  </p>
 
-<p>
-  <strong>Message:</strong>
-  <%= @message.message %>
-</p>
+  <p>
+    <strong>Message:</strong>
+    <%= @message.message %>
+  </p>
+<section>
 
 <%= link_to 'Edit', edit_message_path(@message) %> |
 <%= link_to 'Back', messages_path %>

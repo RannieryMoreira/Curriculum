@@ -12,26 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, class:"w-full py-2 px-4 bg-gray-200 text-base mb-4 rounded", placeholder: "Name"%>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
+    <%= form.text_field :email, class:"w-full py-2 px-4 bg-gray-200 text-base mb-4 rounded", placeholder: "Email"%>
   </div>
 
   <div class="field">
-    <%= form.label :message_type %>
-    <%= form.text_field :message_type %>
+    <%= form.number_field :message_type, class:"w-full py-2 px-4 bg-gray-200 text-base mb-4 rounded", placeholder: "Tipo da mensagem: 1 - Orçamento/ 2 - Duvida / 3 - Sugestão"%>
   </div>
 
   <div class="field">
-    <%= form.label :message %>
-    <%= form.text_area :message %>
+    <%= form.text_area :message, class:"w-full h-60 py-2 px-4 bg-gray-200 text-base resize-none mb-4 rounded", placeholder: "Mensagem"%>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit class: "block w-60 py-2 px-4 bg-gray-700 text-white rounded text-base font-bold cursor-pointer"%>
   </div>
 <% end %>
