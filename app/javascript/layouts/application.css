@@ -4,3 +4,18 @@
 @import "tailwindcss/components";
 
 @import "tailwindcss/utilities";
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: inherit;
+}
+
+body{
+    font-family: 'Nunito', sans-serif;;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}

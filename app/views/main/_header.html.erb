@@ -1,0 +1,46 @@
+<header class="fixed py-4 top-0 bg-gray-800 w-80 max-h-screen h-full md:py-8">
+    <div class="w-full text-white">
+        <%= image_tag ("picture.jpg"), class: "block w-1/2 h-1/2 rounded-full mx-auto"%>
+        <div class="w-full px-4 md:px-8">
+            <h2 class="block text-base mt-8 mb-2 w-full text-center md:text-xl">Informações</h2>
+            <div class="block w-full ml-auto border-t border-white mb-4"></div>
+            <address class="block not-italic">
+                <ul class="text-lg">
+                    <li class="mb-4">
+                        <div class="flex items-center">
+                            <%= icon('fas', 'user', class: "mr-2") %>
+                            <h2>Nome</h2>
+                        </div>
+                        <p>Ranniery Moreira</p>
+                    </li>
+                    <li class="mb-4">
+                        <div class="flex items-center">
+                            <%= icon('fas', 'envelope', class: "mr-2") %>
+                            <h2>Contato</h2>
+                        </div>
+                        <p>moreiraranni@gmail.com</p>
+                    </li>
+                     <li class="mb-4">
+                        <div class="flex items-center">
+                            <%= icon('fab', 'github', class: "mr-2") %>
+                            <h2>GitHub</h2>
+                        </div>
+                        <p>RannieryMoreira</p>
+                    </li>
+                </ul>
+            </address>
+            <h2 class="block text-base mt-8 mb-2 w-full text-center md:text-xl">Páginas</h2>
+            <div class="block w-full ml-auto border-t border-white mb-4"></div>
+            <nav>
+                <ul class="text-lg">
+                    <li class="">
+                        <%= link_to "Mensagens", '', class: "block p-2"%>
+                    </li>
+                    <li class="mb-4">
+                        <%= link_to "Enviar mensagem", '', class: "block mb-4 p-2"%>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
