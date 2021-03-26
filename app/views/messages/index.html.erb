@@ -1,17 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<section class="w-auto mt-8 mb-8">
-        <h1 class="text-gray-700 md:text-5xl font-bold">Mensagens</h1>
-</section>
+<div class="w-auto mt-8 mb-8 flex items-center justify-between">
+    <h1 class="text-gray-700 md:text-5xl font-bold">Mensagens</h1>
+    <%= form_with url: messages_path, method: :get do |form| %>
+        <%= form.select :message_type, message_type_for_select, { include_blank: 'Selecione um filtro' }, class:"w-full block py-2 px-4 bg-gray-200 text-base ml-auto rounded" %>
+    <% end %>
+</div>
 
 <div class="w-full">
   <table class="w-full table">
     <thead class="bg-gray-700 text-white text-center font-bold">
       <tr>
-        <th class="py-2 px-4">Name</th>
-        <th class="py-2 px-4">Email</th>
-        <th class="py-2 px-4">Message type</th>
-        <th class="py-2 px-4">Message</th>
+        <th class="py-2 px-4">Nome</th>
+        <th class="py-2 px-4">E-mail</th>
+        <th class="py-2 px-4">Tipo</th>
+        <th class="py-2 px-4">Messagem</th>
         <th colspan="3" class="py-2 px-4"></th>
       </tr>
     </thead>
@@ -22,10 +25,10 @@
           <td class="py-2 px-4"><%= message.name %></td>
           <td class="py-2 px-4"><%= message.email %></td>
           <td class="py-2 px-4"><%= message.message_type %></td>
-          <td class="py-2 px-4"><%= message.message %></td>
-          <td class="py-2 px-4"><%= link_to 'Show', message %></td>
-          <td class="py-2 px-4"><%= link_to 'Edit', edit_message_path(message) %></td>
-          <td class="py-2 px-4"><%= link_to 'Destroy', message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td class="py-2 px-4"><%= message.message.truncate(32)%></td>
+          <td class="py-2 px-4"><%= link_to 'Mostrar', message %></td>
+          <td class="py-2 px-4"><%= link_to 'Editar', edit_message_path(message) %></td>
+          <td class="py-2 px-4"><%= link_to 'Deletar', message, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
         </tr>
       <% end %>
     </tbody>
@@ -33,4 +36,5 @@
 </div>
 <br>
 
-<%= link_to 'New Message', new_message_path, class: "ml-auto w-60 block py-2 px-4 bg-gray-700 text-bold text-base text-white text-center rounded"%>
+<%= link_to 'Enviar uma mensagem', new_message_path, class: "ml-auto w-60 block py-2 px-4 bg-gray-700 text-bold text-base text-white text-center rounded"%>
+<%= javascript_pack_tag 'message' %>

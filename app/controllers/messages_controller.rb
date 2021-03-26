@@ -3,7 +3,11 @@ class MessagesController < ApplicationController
 
   # GET /messages or /messages.json
   def index
-    @messages = Message.all
+    if params[:message_type].present?
+      @messages = Message.with_type(params[:message_type]).order(id: :desc)
+    else
+      @messages = Message.all.order(id: :desc)
+    end
   end
 
   # GET /messages/1 or /messages/1.json

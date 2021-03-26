@@ -20,14 +20,15 @@
   </div>
 
   <div class="field">
-    <%= form.number_field :message_type, class:"w-full py-2 px-4 bg-gray-200 text-base mb-4 rounded", placeholder: "Tipo da mensagem: 1 - Orçamento/ 2 - Duvida / 3 - Sugestão"%>
+    <%= form.select :message_type, message_type_for_select, { include_blank: 'Selecione uma opção' }, class:"w-full block py-2 px-4 bg-gray-200 text-base mb-4 rounded" %>
   </div>
 
   <div class="field">
     <%= form.text_area :message, class:"w-full h-60 py-2 px-4 bg-gray-200 text-base resize-none mb-4 rounded", placeholder: "Mensagem"%>
   </div>
 
-  <div class="actions">
-    <%= form.submit class: "block w-60 py-2 px-4 bg-gray-700 text-white rounded text-base font-bold cursor-pointer"%>
+  <div class="actions flex items-center">
+    <%= form.submit 'Salvar Mensagem', class: "block w-60 py-2 px-4 bg-gray-700 text-white rounded text-base font-bold cursor-pointer mr-4"%>
+    <%= link_to 'Voltar', messages_path, class: "block w-32 text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold" %>
   </div>
 <% end %>
