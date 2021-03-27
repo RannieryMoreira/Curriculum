@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<div class="w-auto mt-8 mb-8 flex items-center justify-between">
-    <h1 class="text-gray-700 md:text-5xl font-bold">Mensagens</h1>
+<div class="w-auto mt-8 mb-8 md:flex items-center justify-between">
+    <h1 class="text-center text-2xl mb-4 text-gray-700 font-bold md:text-5xl md:text-left md:mb-0">Mensagens</h1>
     <%= form_with url: messages_path, method: :get do |form| %>
-        <%= form.select :message_type, message_type_for_select, { include_blank: 'Selecione um filtro' }, class:"w-full block py-2 px-4 bg-gray-200 text-base ml-auto rounded" %>
+        <%= form.select :message_type, options_for_select(message_type_for_select, params[:message_type]), { include_blank: 'Todos' }, class:"w-full block py-2 px-4 bg-gray-200 text-base ml-auto rounded" %>
     <% end %>
 </div>
 
-<div class="w-full">
+<div class="w-full overflow-x-scroll md:overflow-auto">
   <table class="w-full table">
     <thead class="bg-gray-700 text-white text-center font-bold">
       <tr>

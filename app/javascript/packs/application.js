@@ -12,3 +12,10 @@ import  "../layouts/application.css"
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
+
+document.addEventListener('turbolinks:load', () => {
+  document.querySelector('.header-button').addEventListener('click', () => {
+    const body = document.querySelector('body');
+    body.classList.toggle('header-show');
+  });
+})

@@ -27,3 +27,26 @@ body{
 .table tr:nth-child(even){
     background-color: #eee;
 }
+
+.button{
+  visibility: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+  .header-show .header{
+    visibility: visible;
+  }
+
+  .header{
+    visibility: hidden;
+  }
+
+  .button{
+    visibility: visible;
+    color: #1f2937;
+  }
+
+  .header-show .button{
+    color: #fff;
+  }
+}
