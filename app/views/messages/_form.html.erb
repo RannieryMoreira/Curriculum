@@ -27,8 +27,8 @@
     <%= form.text_area :message, class:"w-full h-60 py-2 px-4 bg-gray-200 text-base resize-none mb-4 rounded", placeholder: "Mensagem"%>
   </div>
 
-  <div class="actions flex items-center">
-    <%= form.submit 'Salvar Mensagem', class: "block w-60 py-2 px-4 bg-gray-700 text-white rounded text-base font-bold cursor-pointer mr-4"%>
-    <%= link_to 'Voltar', messages_path, class: "block w-32 text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold" %>
+  <div class="actions md:flex items-center">
+    <%= form.submit 'Salvar Mensagem', class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
+    <%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
   </div>
 <% end %>

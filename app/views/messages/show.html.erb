@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <section class="w-full bg-gray-200 p-8">
-  <p>
+  <div>
     <h1 class="text-5xl text-gray-700 font-bold"><%= @message.name%></h1>
-  </p>
+  </div>
 
-  <p class="text-xl font-bold">
+  <div class="text-xl font-bold mb-4">
     <%= @message.email %>
-  </p>
+  </div>
 
-  <p class="text-xl">
-    <%= @message.message_type %>
-  </p>
+  <div class="text-xl mb-4 font-bold">
+    <p class="mr-2 font-normal">Tipo da mensagem:</p>
+    <%= @message.message_type%>
+  </div>
 
-  <p>
-    <strong>Message:</strong>
+  <div class="mb-8 text-xl font-bold">
+    <p class="font-normal">Message:</p>
     <%= @message.message %>
-  </p>
+  </div>
 <section>
 
-<%= link_to 'Edit', edit_message_path(@message) %> |
-<%= link_to 'Back', messages_path %>
+<div class="items-center md:flex">
+<%= link_to 'Edit', edit_message_path(@message), class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-center text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
+<%= link_to 'Back', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
+</div>
