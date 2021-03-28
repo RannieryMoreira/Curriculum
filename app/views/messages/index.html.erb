@@ -24,7 +24,7 @@
         <tr>
           <td class="py-2 px-4"><%= message.name %></td>
           <td class="py-2 px-4"><%= message.email %></td>
-          <td class="py-2 px-4"><%= message.message_type %></td>
+          <td class="py-2 px-4"><%= Message.human_enum_name(:message_type, message.message_type) %></td>
           <td class="py-2 px-4"><%= message.message.truncate(32)%></td>
           <td class="py-2 px-4"><%= link_to 'Mostrar', message %></td>
           <td class="py-2 px-4"><%= link_to 'Editar', edit_message_path(message) %></td>
@@ -33,6 +33,7 @@
       <% end %>
     </tbody>
   </table>
+  <%= will_paginate @messages %>
 </div>
 <br>
 

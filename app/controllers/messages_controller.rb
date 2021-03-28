@@ -4,9 +4,9 @@ class MessagesController < ApplicationController
   # GET /messages or /messages.json
   def index
     if params[:message_type].present?
-      @messages = Message.with_type(params[:message_type]).order(id: :desc)
+      @messages = Message.with_type(params[:message_type]).order(id: :desc).paginate(page: params[:page])
     else
-      @messages = Message.all.order(id: :desc)
+      @messages = Message.all.order(id: :desc).paginate(page: params[:page])
     end
   end
 

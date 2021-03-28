@@ -15,12 +15,12 @@
   </div>
 
   <div class="mb-8 text-xl font-bold">
-    <p class="font-normal">Message:</p>
+    <p class="font-normal">Mensagem:</p>
     <%= @message.message %>
   </div>
 <section>
 
 <div class="items-center md:flex">
-<%= link_to 'Edit', edit_message_path(@message), class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-center text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
-<%= link_to 'Back', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
+<%= link_to 'Editar', edit_message_path(@message), class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-center text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
+<%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
 </div>
