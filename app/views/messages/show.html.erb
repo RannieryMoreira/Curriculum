@@ -11,7 +11,7 @@
 
   <div class="text-xl mb-4 font-bold">
     <p class="mr-2 font-normal">Tipo da mensagem:</p>
-    <%= @message.message_type%>
+    <%= Message.human_enum_name(:message_type, @message.message_type) %>
   </div>
 
   <div class="mb-8 text-xl font-bold">
@@ -21,6 +21,6 @@
 <section>
 
 <div class="items-center md:flex">
-<%= link_to 'Editar', edit_message_path(@message), class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-center text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
-<%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
+<%= link_to 'Editar', edit_message_path(@message), class: "block w-full py-2 px-4 mb-2 bg-gray-800 text-center text-white rounded text-base font-bold cursor-pointer mr-4 transition-all md:w-60 md:mb-0 hover:bg-gray-700"%>
+<%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold transition-all md:w-32 hover:bg-gray-500" %>
 </div>

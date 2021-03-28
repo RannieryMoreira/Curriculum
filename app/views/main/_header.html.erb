@@ -28,7 +28,7 @@
                             <%= icon('fab', 'github', class: "mr-2") %>
                             <h2>GitHub</h2>
                         </div>
-                        <p class="text-base">RannieryMoreira</p>
+                        <%= link_to 'RannieryMoreira', 'https://github.com/RannieryMoreira', class: "block"%>
                     </li>
                 </ul>
             </address>
@@ -37,14 +37,14 @@
             <nav>
                 <ul class="text-lg">
                     <li class="">
-                        <%= link_to "Home", root_path, class: "block p-2"%>
+                        <%= link_to icon('fas', 'home', 'Home'), root_path, class: "block p-2 hover:bg-gray-600 rounded transition-all"%>
                     </li>
 
                     <li class="">
-                        <%= link_to "Mensagens", messages_path, class: "block p-2"%>
+                        <%= link_to icon('fas', 'comment-alt', 'Mensagens'), messages_path, class: "block p-2 hover:bg-gray-600 rounded transition-all"%>
                     </li>
                     <li class="mb-4">
-                        <%= link_to "Enviar mensagem", new_message_path, class: "block mb-4 p-2"%>
+                        <%= link_to icon('fas', 'share', 'Enviar uma mensagem'), new_message_path, class: "block p-2 hover:bg-gray-600 rounded transition-all"%>
                     </li>
                 </ul>
             </nav>

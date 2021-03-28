@@ -18,7 +18,7 @@
   </div>
 
   <div class="field">
-    <%= form.select :message_type, message_type_for_select, { include_blank: 'Selecione uma opção' }, class:"w-full block py-2 px-4 bg-gray-200 text-base mb-4 rounded" %>
+    <%= form.select :message_type, message_type_for_select, { include_blank: 'Selecione um tipo de mensagem' }, class:"w-full block py-2 px-4 bg-gray-200 text-base mb-4 rounded" %>
   </div>
 
   <div class="field">
@@ -26,7 +26,7 @@
   </div>
 
   <div class="actions md:flex items-center">
-    <%= form.submit 'Salvar Mensagem', class: "block w-full py-2 px-4 mb-2 bg-gray-700 text-white rounded text-base font-bold cursor-pointer mr-4 md:w-60 md:mb-0"%>
-    <%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold md:w-32" %>
+    <%= form.submit 'Salvar Mensagem', class: "block w-full py-2 px-4 mb-2 bg-gray-800 text-white rounded text-base font-bold cursor-pointer mr-4 transition-all md:w-60 md:mb-0 hover:bg-gray-700"%>
+    <%= link_to 'Voltar', messages_path, class: "block w-full text-center py-2 px-4 bg-gray-600 text-white rounded text-base font-bold transition-all md:w-32 hover:bg-gray-500" %>
   </div>
 <% end %>

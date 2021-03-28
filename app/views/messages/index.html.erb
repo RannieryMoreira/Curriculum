@@ -26,16 +26,20 @@
           <td class="py-2 px-4"><%= message.email %></td>
           <td class="py-2 px-4"><%= Message.human_enum_name(:message_type, message.message_type) %></td>
           <td class="py-2 px-4"><%= message.message.truncate(32)%></td>
-          <td class="py-2 px-4"><%= link_to 'Mostrar', message %></td>
-          <td class="py-2 px-4"><%= link_to 'Editar', edit_message_path(message) %></td>
-          <td class="py-2 px-4"><%= link_to 'Deletar', message, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
+          <td class="py-2 px-4"><%= link_to 'Mostrar', message, class: "hover:text-gray-700 transition-all" %></td>
+          <td class="py-2 px-4"><%= link_to 'Editar', edit_message_path(message), class: "hover:text-gray-700 transition-all" %></td>
+          <td class="py-2 px-4"><%= link_to 'Deletar', message, method: :delete, data: { confirm: 'Tem certeza?' }, class: "hover:text-gray-700 transition-all" %></td>
         </tr>
       <% end %>
     </tbody>
   </table>
-  <%= will_paginate @messages %>
 </div>
 <br>
 
-<%= link_to 'Enviar uma mensagem', new_message_path, class: "w-full ml-auto block py-2 px-4 bg-gray-600 text-bold text-base text-white lg:w-60 text-center rounded"%>
+<div class="flex align-items">
+  <div class="paginate">
+    <%= will_paginate @messages, container: false, next_label: icon('fas', 'chevron-right'), previous_label: icon('fas', 'chevron-left')%>
+  </div>
+  <%= link_to 'Enviar uma mensagem', new_message_path, class: "w-full ml-auto block py-2 px-4 bg-gray-800 text-bold text-base text-white transition-all text-center rounded lg:w-60 hover:bg-gray-700"%>
+</div>
 <%= javascript_pack_tag 'message' %>
