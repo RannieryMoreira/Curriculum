@@ -20,6 +20,11 @@
     </thead>
 
     <tbody class="text-center">
+      <% if @messages.empty? %>
+        <tr>
+          <td colspan="7" class="py-2 px-4">Nenhuma mensagem cadastrada</td>
+        </tr>
+      <% end %>
       <% @messages.each do |message| %>
         <tr>
           <td class="py-2 px-4"><%= message.name %></td>
